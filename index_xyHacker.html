@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- TensorFlow.js script -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+<script src = "test_new.js" > </script>
+<body>
+<h1 align="center">XY Hacker</h1>      
+<div class="container-fluid"> 
+
+<blockquote class="blockquote text-justify" style="margin:30px;">
+ <p> This is a simple tool to determine the gender based on the writing. Model is trained on 400000 amazon reviews and this tool predicts with an accuracy of 70% </p>
+    
+  </blockquote>
+
+</div>
+<div class="col" style ='margin-left:100px;'>
+<h4 id ='status' >Loading Model... </h4>
+</div>
+<textarea id = "myText" rows="4" cols="100"></textarea>
+<div>
+<button type="button" value="Submit" onclick = "start()">submit</button>
+</div>
+<div>
+<p id = "Result"></p>
+</div>
+</body>
+</head>
+</html>
