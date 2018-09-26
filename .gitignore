@@ -3,6 +3,12 @@ condaPath.txt
 
 # Ignore folder 
 localFolder/
+data/
 
 pageText.html
 pageText.txt
+flask test.ipynb
+600kReviewsOnly.csv
+Lorin toPickle dataClean Model.ipynb
+
+
