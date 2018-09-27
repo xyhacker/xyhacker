@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Gender Guesser Web | Lambda School</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="css/main.css" />
+		<noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+		<script src = "test_new.js" > </script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#one">Try our Demo</a></li>
+							<li><a href="#two">Methodology</a></li>
+							<!-- <li><a href="#three">Get in touch</a></li> -->
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Gender Predictor</h1>
+							<p>Use the power of <b>machine learning</b> to predict who wrote an Amazon review.</p>
+							<ul class="actions">
+								<li><a href="#one" class="button scrolly">Try our Demo</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Model Demo</h2>
+									<p>Please insert a text sample you would like to test.</p>
+									<ul class="actions">
+										<form>
+											<input type="text">
+											<br>
+											<li><a href="#one" class="button">Submit</a></li>
+										</form>
+									</ul>
+								</div>
+							</div>r
+						</section>
+					<section id="" class="wrapper style2 fade-up">
+						<div class="model-demo"class="wrapper style2 fade-up">
+							<h2>Demo</h2>
+							<p>Below is a brief description of our methodology. You can also download a full project report <a href=" ">[add link]</a></p>
+							<div class="features">
+								<section>
+									<span class="icon major fa-database"></span>
+									<h3>Test our demo</h3>
+									<form>
+										<input type="text">
+										<br>
+										<li><a href="#one" class="button">Submit</a></li>
+									</form>
+								</section>
+								<section>
+									<span class="icon major fa-code"></span>
+									<h3>Try your own text</h3>
+									<	<form>
+										<textarea name="comment" rows="4" cols="50"></textarea>
+										<br>
+										<li><input type="submit" class="btn-info" value="predict"></li>
+									</form>
+								</section>
+							</div>
+						</div>
+					</section>
+
+					<!-- 	<section>
+							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Feugiat consequat</h2>
+									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<ul class="actions">
+										<li><a href="generic.html" class="button">Learn more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Ultricies aliquam</h2>
+									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<ul class="actions">
+										<li><a href="generic.html" class="button">Learn more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+					</section> -->
+
+				<!-- Two -->
+					<section id="two" class="wrapper style2 fade-up">
+						<div class="inner">
+							<h2>How We Approached This Project</h2>
+							<p>Below is a brief description of our methodology. You can also download a full project report <a href=" ">[add link]</a></p>
+							<div class="features">
+								<section>
+									<span class="icon major fa-database"></span>
+									<h3>1. Amazon Data Analysis</h3>
+									<p>The data does not explicitly state whether or not someone is male or female so the team must solve this piece of data engineering first. </p> <p> Our dataset in JSON format contained roughly 1.3 million records, including self-determined usernames, review texts, product IDs, and user ratings.</p>
+								</section>
+								<section>
+									<span class="icon major fa-code"></span>
+									<h3>2. Data Clean-Up & Labeling</h3>
+									<p>We chose the <a href="https://test.pypi.org/project/gender-guesser/">GenderGuesser</a> Python library that contains a list of more than 40,000 first names and gender. GenderGuesser labels data as “male/female”, “mostly male/female” and “unknown”.</p> <p> To ensure high quality of the data used in our prediction model, we only used unambiguous data labels.</p>
+								</section>
+								<section>
+									<span class="icon major fa-language"></span>
+									<h3>3. Text Preprocessing using NLTK</h3>
+									<p>The <a href="http://www.nltk.org/">NLTK</a> (The Natural Language Toolkit) is one of the most well-known language processing libraries in the industry. </p> <p>We eliminated stopwords, expanded contractions, stemmed the text, formatted and removed unwanted characters using regular expressions, and encoded the genders.</p>
+								</section>
+								<section>
+									<span class="icon major fa-cog"></span>
+									<h3>4. Applying our ML Model</h3>
+									<p>We used convolutional neural networks to predict the gender with highest accuracy. The model consists of {xx} layers and uses relu and sigmoid activation functions.</p>
+								</section>
+							</div>
+							<!-- <ul class="actions">
+								<li><a href="generic.html" class="button">Learn more</a></li>
+							</ul> -->
+						</div>
+					</section>
+
+				<!-- Three -->
+				<!-- 
+					<section id="three" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Get in touch</h2>
+							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+							<div class="split style1">
+								<section>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="name">Name</label>
+												<input type="text" name="name" id="name" />
+											</div>
+											<div class="field half">
+												<label for="email">Email</label>
+												<input type="text" name="email" id="email" />
+											</div>
+											<div class="field">
+												<label for="message">Message</label>
+												<textarea name="message" id="message" rows="5"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><a href="" class="button submit">Send Message</a></li>
+										</ul>
+									</form>
+								</section>
+								<section>
+									<ul class="contact">
+										<li>
+											<h3>Address</h3>
+											<span>12345 Somewhere Road #654<br />
+											Nashville, TN 00000-0000<br />
+											USA</span>
+										</li>
+										<li>
+											<h3>Email</h3>
+											<a href="#">user@untitled.tld</a>
+										</li>
+										<li>
+											<h3>Phone</h3>
+											<span>(000) 000-0000</span>
+										</li>
+										<li>
+											<h3>Social</h3>
+											<ul class="icons">
+												<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
+												<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
+												<li><a href="#" class="fa-github"><span class="label">GitHub</span></a></li>
+												<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
+												<li><a href="#" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
+											</ul>
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		-->
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy;All rights reserved.</li><li>Created by students at <a href="https://lambdaschool.com/">Lambda School</a></li> <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
